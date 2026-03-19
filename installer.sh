@@ -2,7 +2,7 @@
 #
 # Config setup after freshly installing an OS
 
-set -xeuo pipefail
+set -euo pipefail
 
 echo "Running system update..."
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y
