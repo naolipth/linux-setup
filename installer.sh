@@ -19,3 +19,7 @@ else
   git clone "$REPO_URL" "$INSTALL_DIR"
 fi
 
+echo "Installing utility packages..."
+bash "$INSTALL_DIR"/utils.sh
+
+
