@@ -16,5 +16,9 @@ then
   uv python install
 fi
 
-
-
+if ! command -v julia >/dev/null 2>&1
+then
+  echo "Installing Julia..."
+  curl -fsSL https://install.julialang.org | sh
+  source "$HOME"/.bashrc
+fi
