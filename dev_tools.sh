@@ -4,15 +4,17 @@
 
 set -euo pipefail
 
+if ! command -v uv >/dev/null 2>&1
+then
+  echo "Installing uv..."
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
+  echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
 
-curl -LsSf https://astral.sh/uv/install.sh | sh
-echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
-echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
+  source "$HOME"/.local/bin/env bash
 
-source "$HOME"/.local/bin/env bash
-
-uv python install
-
+  uv python install
+fi
 
 
 
