@@ -2,7 +2,7 @@
 #
 # Script for installing main utility packages
 
-set -eou pipefail
+set -euo pipefail
 
 
 PACKAGES=(
