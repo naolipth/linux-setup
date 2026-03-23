@@ -9,7 +9,15 @@ PACKAGES=(
   htop
   git-credential-oauth
   shellcheck
+  bat
+  zoxide
 )
 
 sudo apt-get install -y "${PACKAGES[@]}"
 
+if ! command -v z >/dev/null 2>&1
+then
+  echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
+fi
+
+source ~/.bashrc
