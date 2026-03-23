@@ -22,4 +22,4 @@ then
   echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
 fi
 
-source ~/.bashrc
+source "$HOME"/.bashrc
