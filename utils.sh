@@ -11,6 +11,7 @@ PACKAGES=(
   shellcheck
   bat
   zoxide
+  eza
 )
 
 sudo apt-get install -y "${PACKAGES[@]}"
