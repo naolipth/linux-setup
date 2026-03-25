@@ -12,6 +12,7 @@ PACKAGES=(
   bat
   zoxide
   eza
+  ripgrep
 )
 
 sudo apt-get install -y "${PACKAGES[@]}"
